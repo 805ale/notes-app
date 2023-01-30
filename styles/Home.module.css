@@ -28,7 +28,6 @@
 }
 
 
-
 .notes {
   background-color: #ffe5d8;
   border-radius: 10px;
@@ -45,7 +44,11 @@
   justify-content: space-between;
 }
 
-
+.addfooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 
 

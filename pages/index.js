@@ -25,9 +25,21 @@ export default function Home() {
     },
 ]);
 
+  const addNote = (text) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: text,
+      date: date.toLocaleDateString(),
+    }
+
+    const newNotes = [...notes, newNote];
+    setNotes(newNotes);
+  };
+
  return (
     <div className={styles.container}>
-        <NotesList notes={notes}/>
+        <NotesList notes={notes} handleAddNote={addNote}/>
     </div>
  );
 }

@@ -3,14 +3,14 @@ import styles from "/styles/Home.module.css";
 import AddNote from './AddNote';
 
 
-const NotesList = ({ notes }) => {
+const NotesList = ({ notes, handleAddNote }) => {
     return(
         <div className={styles.note}>
             <div className={styles.list}>
                 {notes.map((note)=> (
                 <Note id={note.id} text={note.text} date={note.date}/>
             ))}
-            <AddNote />
+            <AddNote handleAddNote={handleAddNote}/>
             </div>
         </div>
     )
